@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :products
-    resources :cart_items
+
   end
 
   resources :products do
@@ -16,4 +16,5 @@ Rails.application.routes.draw do
        delete :clean
      end
    end
+   resources :cart_items
 end
