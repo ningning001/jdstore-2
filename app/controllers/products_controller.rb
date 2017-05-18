@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
 
     if !current_cart.products.include?(@product)
     current_cart.add_product_to_cart(@product)
-    fflash[:notice] = "你已成功将 #{@product.title} 加入购物车"
+    flash[:notice] = "你已成功将 #{@product.title} 加入购物车"
     else
       flash[:warning] = "你的购物车内已有此物品"
     end
